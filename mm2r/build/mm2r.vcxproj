@@ -115,7 +115,8 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>													</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/mm2r/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/mm2r/build/bin/mm2r/Debug/lua51.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -272,8 +273,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat>
-      </DebugInformationFormat>
+      <DebugInformationFormat>None</DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -288,7 +288,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>													</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/mm2r/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/mm2r/build/bin/mm2r/Release/lua51.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -461,7 +462,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>													</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/mm2r/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/mm2r/build/bin/mm2r/MinSizeRel/lua51.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -633,7 +635,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>													</Message>
+      <Message>
+      </Message>
       <Command>setlocal
 "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/mm2r/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/mm2r/build/bin/mm2r/RelWithDebInfo/lua51.dll
 if %errorlevel% neq 0 goto :cmEnd
