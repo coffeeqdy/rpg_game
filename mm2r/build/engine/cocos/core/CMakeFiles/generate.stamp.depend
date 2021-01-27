@@ -1,0 +1,16 @@
+# CMake generation dependency list for this directory.
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/2d/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/3d/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/audio/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/base/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/editor-support/cocostudio/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/math/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/navmesh/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/network/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/physics/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/physics3d/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/platform/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/renderer/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/ui/CMakeLists.txt
+G:/rpg_game/mm2r/frameworks/cocos2d-x/extensions/CMakeLists.txt

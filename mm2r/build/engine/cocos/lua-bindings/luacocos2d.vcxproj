@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{54887EC5-5D21-3FEB-9A4B-0DA4218FAA3E}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>luacocos2d</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\rpg_game\mm2r\build\lib\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">luacocos2d.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">luacocos2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\rpg_game\mm2r\build\lib\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">luacocos2d.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">luacocos2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\rpg_game\mm2r\build\lib\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">luacocos2d.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">luacocos2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\rpg_game\mm2r\build\lib\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">luacocos2d.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">luacocos2d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRLUASTATIC;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRLUASTATIC;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\android\jni;G:\rpg_game\mm2r\frameworks\cocos2d-x;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos;G:\rpg_game\mm2r\frameworks\cocos2d-x\extensions;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\base;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\mm2r\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\CMakeLists.txt">
+      <StdOutEncoding>UTF-8</StdOutEncoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/scripting/lua-bindings/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/mm2r -BG:/rpg_game/mm2r/build --check-stamp-file G:/rpg_game/mm2r/build/engine/cocos/lua-bindings/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\rpg_game\mm2r\build\engine\cocos\lua-bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/scripting/lua-bindings/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/mm2r -BG:/rpg_game/mm2r/build --check-stamp-file G:/rpg_game/mm2r/build/engine/cocos/lua-bindings/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\rpg_game\mm2r\build\engine\cocos\lua-bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/scripting/lua-bindings/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/mm2r -BG:/rpg_game/mm2r/build --check-stamp-file G:/rpg_game/mm2r/build/engine/cocos/lua-bindings/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\rpg_game\mm2r\build\engine\cocos\lua-bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule G:/rpg_game/mm2r/frameworks/cocos2d-x/cocos/scripting/lua-bindings/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/mm2r -BG:/rpg_game/mm2r/build --check-stamp-file G:/rpg_game/mm2r/build/engine/cocos/lua-bindings/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\rpg_game\mm2r\build\engine\cocos\lua-bindings\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaBridge.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaEngine.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaStack.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaValue.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\Cocos2dxLuaLoader.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\LuaBasicConversions.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\lua_module_register.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\tolua_fix.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCComponentLua.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\LuaScriptHandlerMgr.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\lua_cocos2dx_deprecated.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\lua_cocos2dx_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\lua_cocos2dx_physics_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\3d\lua_cocos2dx_3d_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\CustomGUIReader.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\lua_cocos2dx_coco_studio_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\lua-cocos-studio-conversions.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\lua_cocos2dx_csloader_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\controller\lua_cocos2dx_controller_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\extension\lua_cocos2dx_extension_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_extensions.c" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_cocos2dx_network_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\Lua_web_socket.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_xml_http_request.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_downloader.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\spine\LuaSkeletonAnimation.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\ui\lua_cocos2dx_ui_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\audioengine\lua_cocos2dx_audioengine_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\physics3d\lua_cocos2dx_physics3d_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\navmesh\lua_cocos2dx_navmesh_conversions.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\navmesh\lua_cocos2dx_navmesh_manual.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_3d_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_controller_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_extension_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_physics_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_studio_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_csloader_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_ui_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_audioengine_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_physics3d_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_navmesh_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_backend_auto.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDictionary.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDeprecated.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCNotificationCenter.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCString.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCSet.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCArray.cpp" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDataVisitor.cpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCComponentLua.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\3d\lua_cocos2dx_3d_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaStack.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaEngine.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\lua_module_register.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaBridge.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\extension\lua_cocos2dx_extension_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\LuaBasicConversions.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\spine\LuaSkeletonAnimation.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\platform\ios\CCLuaObjcBridge.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_cocos2dx_network_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_xml_http_request.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\Lua_web_socket.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_extensions.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\network\lua_downloader.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\audioengine\lua_cocos2dx_audioengine_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\Lua-BindingsExport.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\tolua_fix.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\navmesh\lua_cocos2dx_navmesh_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\navmesh\lua_cocos2dx_navmesh_conversions.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\lua_cocos2dx_deprecated.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\LuaScriptHandlerMgr.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocos2d\lua_cocos2dx_manual.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\Cocos2dxLuaLoader.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\CCLuaValue.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\physics3d\lua_cocos2dx_physics3d_manual.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\lua-cocos-studio-conversions.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\cocostudio\CustomGUIReader.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\ui\lua_cocos2dx_ui_manual.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual\controller\lua_cocos2dx_controller_manual.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_audioengine_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_3d_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_controller_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_spine_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_studio_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_navmesh_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_csloader_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_physics3d_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_ui_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_physics_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_extension_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto\lua_cocos2dx_backend_auto.hpp" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDictionary.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDouble.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCBool.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDeprecated.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCNotificationCenter.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCString.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCFloat.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCSet.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCInteger.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCArray.h" />
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\scripting\deprecated\CCDataVisitor.h" />
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\ZERO_CHECK.vcxproj">
+      <Project>{64072DFD-C2D5-34C4-8CE4-8FBEA32CE83F}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{AEC2C73C-5B79-3536-BC6F-6DE52BCA8339}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{30166889-43C1-3634-A83F-24C9D2498118}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{0F0C5AEE-C2A7-3DA0-AA2D-54E66DF11687}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{C298E689-F2A1-3904-8965-B1A68D59EC88}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\lua\luasocket\ext_luasocket.vcxproj">
+      <Project>{EDEC34ED-DE8B-3111-BFC5-5B0904F3DF96}</Project>
+      <Name>ext_luasocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{1CE0B998-800A-391D-AB80-E5D1C027C258}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{E7AD885B-FFF1-32BE-AE20-F1A483F55C85}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{836CA064-93F1-36DF-B4A1-92DDF923A492}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{B2CF12DF-39E4-39CD-9554-63F64A18C76D}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\lua\tolua\ext_tolua.vcxproj">
+      <Project>{325C1ACA-3C7E-3827-BD49-ED32A6C7EAD0}</Project>
+      <Name>ext_tolua</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{21BEF65B-5FC7-34DA-90C5-5F2E38A57C43}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{A3675349-F7F0-3A91-89E0-E8D32FCE2CF1}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{21648BA6-6A77-3C31-8B38-F49DCAE39AB6}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\mm2r\build\engine\external\external.vcxproj">
+      <Project>{0A53E288-AA46-36B1-8124-AFFD4E79EC0F}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

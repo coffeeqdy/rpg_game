@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\runtime-src\Classes\AppDelegate.cpp">
+      <Filter>Source Files\frameworks\runtime-src\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\runtime-src\proj.win32\main.cpp">
+      <Filter>Source Files\frameworks\runtime-src\proj.win32</Filter>
+    </ClCompile>
+    <ClCompile Include="G:\rpg_game\mm2r\frameworks\cocos2d-x\cocos\precheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\runtime-src\Classes\AppDelegate.h">
+      <Filter>Source Files\frameworks\runtime-src\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\frameworks\runtime-src\proj.win32\main.h">
+      <Filter>Source Files\frameworks\runtime-src\proj.win32</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\res\HelloWorld.png">
+      <Filter>Resources\res</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\app\MyApp.lua">
+      <Filter>Resources\src\app</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\app\views\MainScene.lua">
+      <Filter>Resources\src\app\views</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\3d\3dConstants.lua">
+      <Filter>Resources\src\cocos\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\Cocos2d.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\Cocos2dConstants.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\DeprecatedCocos2dClass.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\DeprecatedCocos2dEnum.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\DeprecatedCocos2dFunc.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\DrawPrimitives.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\bitExtend.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\deprecated.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\functions.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\json.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\luaj.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocos2d\luaoc.lua">
+      <Filter>Resources\src\cocos\cocos2d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocosdenshion\AudioEngine.lua">
+      <Filter>Resources\src\cocos\cocosdenshion</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocostudio\CocoStudio.lua">
+      <Filter>Resources\src\cocos\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocostudio\DeprecatedCocoStudioClass.lua">
+      <Filter>Resources\src\cocos\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocostudio\DeprecatedCocoStudioFunc.lua">
+      <Filter>Resources\src\cocos\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\cocostudio\StudioConstants.lua">
+      <Filter>Resources\src\cocos\cocostudio</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\controller\ControllerConstants.lua">
+      <Filter>Resources\src\cocos\controller</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\extension\DeprecatedExtensionClass.lua">
+      <Filter>Resources\src\cocos\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\extension\DeprecatedExtensionEnum.lua">
+      <Filter>Resources\src\cocos\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\extension\DeprecatedExtensionFunc.lua">
+      <Filter>Resources\src\cocos\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\extension\ExtensionConstants.lua">
+      <Filter>Resources\src\cocos\extension</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\components\event.lua">
+      <Filter>Resources\src\cocos\framework\components</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\device.lua">
+      <Filter>Resources\src\cocos\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\display.lua">
+      <Filter>Resources\src\cocos\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\LayerEx.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\MenuEx.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\NodeEx.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\SpriteEx.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UICheckBox.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UIEditBox.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UIListView.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UIPageView.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UIScrollView.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UISlider.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UITextField.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\extends\UIWidget.lua">
+      <Filter>Resources\src\cocos\framework\extends</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\init.lua">
+      <Filter>Resources\src\cocos\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\package_support.lua">
+      <Filter>Resources\src\cocos\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\framework\transition.lua">
+      <Filter>Resources\src\cocos\framework</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\init.lua">
+      <Filter>Resources\src\cocos</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\network\DeprecatedNetworkClass.lua">
+      <Filter>Resources\src\cocos\network</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\network\DeprecatedNetworkEnum.lua">
+      <Filter>Resources\src\cocos\network</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\network\DeprecatedNetworkFunc.lua">
+      <Filter>Resources\src\cocos\network</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\network\NetworkConstants.lua">
+      <Filter>Resources\src\cocos\network</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\physics3d\physics3d-constants.lua">
+      <Filter>Resources\src\cocos\physics3d</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\spine\SpineConstants.lua">
+      <Filter>Resources\src\cocos\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\ui\DeprecatedUIEnum.lua">
+      <Filter>Resources\src\cocos\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\ui\DeprecatedUIFunc.lua">
+      <Filter>Resources\src\cocos\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\cocos\ui\GuiConstants.lua">
+      <Filter>Resources\src\cocos\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\config.lua">
+      <Filter>Resources\src</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\main.lua">
+      <Filter>Resources\src</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\packages\mvc\AppBase.lua">
+      <Filter>Resources\src\packages\mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\packages\mvc\ViewBase.lua">
+      <Filter>Resources\src\packages\mvc</Filter>
+    </ClInclude>
+    <ClInclude Include="G:\rpg_game\mm2r\src\packages\mvc\init.lua">
+      <Filter>Resources\src\packages\mvc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\rpg_game\mm2r\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{6817C6FD-A544-319F-AAC8-CF52F9CB9533}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res">
+      <UniqueIdentifier>{9F0A5337-DD55-33B3-A1AA-CF1C90A173DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src">
+      <UniqueIdentifier>{8147E10E-ACE7-3C93-8D9B-5CB1EEA95FF8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\app">
+      <UniqueIdentifier>{B5838B69-5F78-3A67-9A18-089796D50B93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\app\views">
+      <UniqueIdentifier>{04E785A2-14CF-333B-8FBE-D6A55B467D79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos">
+      <UniqueIdentifier>{104252DA-8BB2-3387-85DB-681A09387DFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\3d">
+      <UniqueIdentifier>{FFEC1CDA-0212-363D-8A4E-6CE90E701B8D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\cocos2d">
+      <UniqueIdentifier>{7DFE3CA4-5CF2-3CC4-BA4D-777163B79B6D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\cocosdenshion">
+      <UniqueIdentifier>{872FDF88-02AA-3467-B886-677D2F38BB7D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\cocostudio">
+      <UniqueIdentifier>{EBB622D3-2AAF-39ED-A290-AD6903F4FA96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\controller">
+      <UniqueIdentifier>{737B5F2F-E6C3-3F2D-AB01-697FD477FC37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\extension">
+      <UniqueIdentifier>{52C12530-4887-343B-9EDF-967D0C2CACA4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\framework">
+      <UniqueIdentifier>{A9595931-E501-316E-A936-17BD3F86C81B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\framework\components">
+      <UniqueIdentifier>{5045B490-0C8A-34B4-A7BF-6B9DC6D64589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\framework\extends">
+      <UniqueIdentifier>{9621DAC5-6A02-3AE2-B43F-7231FAEA8561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\network">
+      <UniqueIdentifier>{430C59D1-CC65-3814-956E-515590B69522}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\physics3d">
+      <UniqueIdentifier>{64F696D5-DF20-3BA3-84FE-E284EEFA60B2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\spine">
+      <UniqueIdentifier>{0A1F3E9E-64B4-3CF7-8CE4-89CB5DC1179F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\cocos\ui">
+      <UniqueIdentifier>{F07236F4-48A6-3775-959A-1C0CF1E29174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\packages">
+      <UniqueIdentifier>{A78BC187-CD6D-3C14-8E66-F00FB3F98ADD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\src\packages\mvc">
+      <UniqueIdentifier>{2B432639-33BC-3272-A91B-265D6C74CBA6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C26F3CE1-1669-3630-AB96-04017A1CA62B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frameworks">
+      <UniqueIdentifier>{CD6BFF92-E11E-3B2A-9410-4DE42F2277D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frameworks\runtime-src">
+      <UniqueIdentifier>{E1CF21C2-7AC6-3128-A571-592B4965A502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frameworks\runtime-src\Classes">
+      <UniqueIdentifier>{4EF6A1A5-8633-3443-9CB7-68B59A0E97C3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\frameworks\runtime-src\proj.win32">
+      <UniqueIdentifier>{538BCB5D-B6FE-30A7-B268-B91E2C8BE203}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
