@@ -3,9 +3,10 @@
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
         <OpenedDocuments>
-          <FilePathData Path="MainScene.csd" />
+          <FilePathData Path="game/layer_game.csd" />
+          <FilePathData Path="game/layer_operate.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="MainScene.csd" />
+        <ActiveDocument Path="game/layer_operate.csd" />
       </Value>
     </Item>
     <Item Key="CocosRecentOperation">
