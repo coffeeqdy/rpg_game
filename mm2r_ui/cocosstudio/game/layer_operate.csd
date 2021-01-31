@@ -101,10 +101,23 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="node_joystick" ActionTag="56752486" Tag="12" IconVisible="True" ctype="SingleNodeObjectData">
+          <AbstractNodeData Name="node_joystick" ActionTag="56752486" Tag="12" IconVisible="True" LeftMargin="-450.0000" RightMargin="450.0000" TopMargin="160.0000" BottomMargin="-160.0000" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
+            <Children>
+              <AbstractNodeData Name="sprite_joystick" ActionTag="-1053655793" Tag="14" IconVisible="False" LeftMargin="-23.0000" RightMargin="-23.0000" TopMargin="-23.0000" BottomMargin="-23.0000" ctype="SpriteObjectData">
+                <Size X="300.0000" Y="300.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition />
+                <PreSize X="0.0000" Y="0.0000" />
+                <FileData Type="Normal" Path="game/res/joystick.png" Plist="" />
+                <BlendFunc Src="1" Dst="771" />
+              </AbstractNodeData>
+            </Children>
             <AnchorPoint />
-            <Position />
+            <Position X="-450.0000" Y="-160.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
@@ -142,10 +155,26 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>
-          <AbstractNodeData Name="btn_qiuck_j" ActionTag="758361477" Tag="15" IconVisible="False" LeftMargin="300.0000" RightMargin="-400.0000" TopMargin="80.0000" BottomMargin="-140.0000" TouchEnable="True" FontSize="50" ButtonText="U" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+          <AbstractNodeData Name="btn_qiuck_j" ActionTag="758361477" Tag="15" IconVisible="False" LeftMargin="300.0000" RightMargin="-400.0000" TopMargin="220.0000" BottomMargin="-280.0000" TouchEnable="True" FontSize="50" ButtonText="J" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
             <Size X="100.0000" Y="60.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position X="350.0000" Y="-110.0000" />
+            <Position X="350.0000" Y="-250.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FontResource Type="Normal" Path="fonts/FZZY.TTF" Plist="" />
+            <TextColor A="255" R="65" G="65" B="70" />
+            <DisabledFileData Type="Default" Path="Default/Button_Disable.png" Plist="" />
+            <PressedFileData Type="Default" Path="Default/Button_Press.png" Plist="" />
+            <NormalFileData Type="Default" Path="Default/Button_Normal.png" Plist="" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="110" G="110" B="110" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="btn_qiuck_k" ActionTag="-1287900418" Tag="13" IconVisible="False" LeftMargin="500.0000" RightMargin="-600.0000" TopMargin="220.0000" BottomMargin="-280.0000" TouchEnable="True" FontSize="50" ButtonText="K" Scale9Enable="True" LeftEage="15" RightEage="15" TopEage="11" BottomEage="11" Scale9OriginX="15" Scale9OriginY="11" Scale9Width="16" Scale9Height="14" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+            <Size X="100.0000" Y="60.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position X="550.0000" Y="-250.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

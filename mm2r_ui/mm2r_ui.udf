@@ -1,14 +1,5 @@
 <UserData Version="3.10.0.0">
   <Properties>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="game/layer_game.csd" />
-          <FilePathData Path="game/layer_operate.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="game/layer_operate.csd" />
-      </Value>
-    </Item>
     <Item Key="CocosRecentOperation">
       <Value ctype="CocosRecentOperation">
         <LastPublishType Value="Resource" />
