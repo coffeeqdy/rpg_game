@@ -61,7 +61,16 @@ local function main()
     collectgarbage("collect")   --做一次完整的垃圾收集循环
     collectgarbage("setpause", 100)
     collectgarbage("setstepmul", 5000)
-    require("app.MyApp"):create():run()
+
+    math.randomseed(os.time())
+    
+    if CC_SHOW_FPS then
+        cc.Director:getInstance():setDisplayStats(true)
+    end
+    local scene = cc.Scene:create()
+    local _layer = require("app.views.scene.game_scene").new()
+    scene:addChild(_layer)
+    cc.Director:getInstance():runWithScene(scene)
 end
 
 local status, msg = xpcall(main, __G__TRACKBACK__)

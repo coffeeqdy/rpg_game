@@ -41,4 +41,16 @@ function public_module.copy_string(str)
     end
 end
 
+function public_module.append_table(p_table,str_path)
+    if not str_path then return end
+    if type(str_path) ~= "string" then return end
+
+    local _append_table = require(str_path)
+    if _append_table then
+        for i, v in pairs(_append_table) do
+            p_table[i] = v
+        end
+    end
+end
+
 return public_module
