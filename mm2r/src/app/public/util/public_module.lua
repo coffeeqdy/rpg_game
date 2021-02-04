@@ -53,4 +53,63 @@ function public_module.append_table(p_table,str_path)
     end
 end
 
+function public_module.remove_spaces_from_string(str)
+    local _str_acc = str
+    local _num_len = string.len(_str_acc)
+    --判断最后一个字符是否是空格
+    for i=_num_len,1,-1 do
+        local str1 = string.sub(_str_acc,i,i)
+        if str1 == '\0' then
+            _str_acc = string.sub(_str_acc, 1, i-1)
+        elseif str1 == ' ' then
+            _str_acc = string.sub(_str_acc, 1, i-1)
+        else
+            break
+        end  
+    end
+    
+    return _str_acc
+end
+
+----------------------------------按钮Q弹统一处理-----------------------------------
+function public_module.playQAction(node, tag,_time)
+    if node then
+        local act = cc.RepeatForever:create(cc.Sequence:create(
+            cc.ScaleTo:create(0.016*11,1.1,0.9),
+            cc.ScaleTo:create(0.016*7,0.95,1.05),
+            cc.ScaleTo:create(0.016*9,1.05,0.95),
+            cc.ScaleTo:create(0.016*11,0.97,1.03),
+            cc.ScaleTo:create(0.016*12,1,1),
+            cc.DelayTime:create(_time or 2)
+        ))
+        if tag then
+            node:stopActionByTag(tag)
+            act:setTag(tag)
+        end
+        node:runAction(act)
+    end
+end
+
+----------------------------------跳动动画统一处理-----------------------------------
+function public_module.playJumpAction(node, tag, scale)
+    if node then
+        scale = scale or 1
+        local act = cc.RepeatForever:create(cc.Sequence:create(
+            cc.Spawn:create(cc.ScaleTo:create(0.016*9,1.05*scale,0.9*scale),cc.MoveBy:create(0.016*9,cc.p(0,1))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*4,0.95*scale,1.1*scale),cc.MoveBy:create(0.016*4,cc.p(0,3))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*13,1*scale,1*scale),cc.MoveBy:create(0.016*13,cc.p(0,9))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*8,0.95*scale,1.1*scale),cc.MoveBy:create(0.016*8,cc.p(0,-10))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*4,1.05*scale,0.9*scale),cc.MoveBy:create(0.016*4,cc.p(0,-1))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*7,0.95*scale,1.02*scale),cc.MoveBy:create(0.016*7,cc.p(0,-1))),
+            cc.Spawn:create(cc.ScaleTo:create(0.016*7,1*scale,1.02*scale),cc.MoveBy:create(0.016*7,cc.p(0,-1))),
+            cc.DelayTime:create(0.5)
+        ))
+        if tag then
+            node:stopActionByTag(tag)
+            act:setTag(tag)
+        end
+        node:runAction(act)
+    end
+end
+
 return public_module
