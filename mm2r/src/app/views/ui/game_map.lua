@@ -26,6 +26,11 @@ function game_map:ctor()
             self.table_squares[i][j]:setPosition(cc.pAdd(_begin_pos_lt, cc.p((i - 1) * g_move_size, (j - 1) * g_move_size)))
         end
     end
+
+    self.is_left = 0
+    self.is_right = 0
+    self.is_up = 0
+    self.is_down = 0
 end
 
 function game_map:create_square()
@@ -35,16 +40,58 @@ function game_map:create_square()
     return _square
 end
 
-function game_map:on_move_left()
+function game_map:on_move_left(tag)
+    if tag == 1 then--按下
+        self.is_left = 1
+    elseif tag == 2 then--松开
+        self.is_left = 0
+    end
+    self:check_move()
 end
 
-function game_map:on_move_right()
+function game_map:on_move_right(tag)
+    if tag == 1 then--按下
+        self.is_right = 1
+    elseif tag == 2 then--松开
+        self.is_right = 0
+    end
+    self:check_move()
 end
 
-function game_map:on_move_up()
+function game_map:on_move_up(tag)
+    if tag == 1 then--按下
+        self.is_up = 1
+    elseif tag == 2 then--松开
+        self.is_up = 0
+    end
+    self:check_move()
 end
 
-function game_map:on_move_down()
+function game_map:on_move_down(tag)
+    if tag == 1 then--按下
+        self.is_down = 1
+    elseif tag == 2 then--松开
+        self.is_down = 0
+    end
+    self:check_move()
+end
+
+function game_map:check_move()
+    local _x_speed = (self.is_left - self.is_right) * g_data.move_speed
+    local _y_speed = (self.is_down - self.is_up) * g_data.move_speed
+    if _x_speed == 0 and _y_speed == 0 then
+        self:stopActionByTag(1001)
+    else
+        local _action = cc.RepeatForever:create(
+            cc.MoveBy:create(1,cc.p(_x_speed,_y_speed))
+        )
+        _action:setTag(1001)
+        self:runAction(_action)
+    end
+end
+
+function game_map:is_moving()
+    return self.is_left == 1 or self.is_right == 1 or self.is_up == 1 or self.is_down == 1
 end
 
 return game_map

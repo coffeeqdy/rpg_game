@@ -63,6 +63,8 @@ local function main()
     collectgarbage("setstepmul", 5000)
 
     math.randomseed(os.time())
+
+    require("app.public.global.global_data").load()
     
     if CC_SHOW_FPS then
         cc.Director:getInstance():setDisplayStats(true)

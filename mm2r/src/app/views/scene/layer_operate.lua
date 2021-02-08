@@ -33,18 +33,30 @@ function _M:parse_operate_ui()
 end
 
 function _M:register_keyboard_event()
+    local function keyboardPressed(keyCode, event)
+        if cc.KeyCode.KEY_A == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_left_press)
+        elseif cc.KeyCode.KEY_S == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_down_press)
+        elseif cc.KeyCode.KEY_D == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_right_press)
+        elseif cc.KeyCode.KEY_W == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_up_press)
+        end
+    end
     local function keyboardReleased(keyCode, event)
-        if cc.KeyCodeKey.KEY_A == keyCode then
-            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_left)
-        elseif cc.KeyCodeKey.KEY_S == keyCode then
-            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_down)
-        elseif cc.KeyCodeKey.KEY_D == keyCode then
-            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_right)
-        elseif cc.KeyCodeKey.KEY_W == keyCode then
-            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_up)
+        if cc.KeyCode.KEY_A == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_left_release)
+        elseif cc.KeyCode.KEY_S == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_down_release)
+        elseif cc.KeyCode.KEY_D == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_right_release)
+        elseif cc.KeyCode.KEY_W == keyCode then
+            ui_observer.get_instance():send_event(global_define.observer_type.operate, global_define.observer_name.move_up_release)
         end
     end
     local listener = cc.EventListenerKeyboard:create()
+    listener:registerScriptHandler(keyboardPressed, cc.Handler.EVENT_KEYBOARD_PRESSED)
     listener:registerScriptHandler(keyboardReleased, cc.Handler.EVENT_KEYBOARD_RELEASED)
     local eventDispatcher = self.layer_operate:getEventDispatcher()
     eventDispatcher:addEventListenerWithSceneGraphPriority(listener, self.layer_operate)
