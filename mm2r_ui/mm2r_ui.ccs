@@ -11,6 +11,9 @@
             <Folder Name="map">
               <Image Name="map_star.png" />
             </Folder>
+            <Folder Name="ui">
+              <Image Name="btn_normal.png" />
+            </Folder>
             <Folder Name="world_map">
               <Image Name="world_map_0.png" />
               <Image Name="world_map_1.png" />
@@ -1030,6 +1033,7 @@
           <Project Name="layer_game.csd" Type="Node" />
           <Project Name="layer_operate.csd" Type="Node" />
           <Project Name="map_square.csd" Type="Node" />
+          <Project Name="layer_fight.csd" Type="Node" />
         </Folder>
       </RootFolder>
     </Group>
