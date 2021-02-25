@@ -23,15 +23,15 @@ local E_02S = 7 --秒02
 local E_S_UNITs = 8 --秒，带单位s
 local E_D_02H_02M_02S = 9 --天时分秒
 
-local CtrlTimeDown = class("CtrlTimeDown",function() return cc.Node:create() end)
+local count_down = class("count_down",function() return cc.Node:create() end)
 
-function CtrlTimeDown:create(fontName, fontColor, fontSize, param)
-    local ctrlTimeDown = CtrlTimeDown.new()
-    ctrlTimeDown:init(fontName, fontColor, fontSize, param)
-    return ctrlTimeDown
+function count_down:create(fontName, fontColor, fontSize, param)
+    local count_down = count_down.new()
+    count_down:init(fontName, fontColor, fontSize, param)
+    return count_down
 end
 
-function CtrlTimeDown:init(fontName, fontColor, fontSize, param)
+function count_down:init(fontName, fontColor, fontSize, param)
     fontName = fontName or ""
     fontColor = fontColor or cc.c4b(255,255,255,255)
     fontSize = fontSize or 24
@@ -73,25 +73,25 @@ function CtrlTimeDown:init(fontName, fontColor, fontSize, param)
     self:setCascadeOpacityEnabled(true)
 end
 
-function CtrlTimeDown:setLabel(label)
+function count_down:setLabel(label)
     if self.m_label then
         self.m_label:removeFromParent()
     end
     self.m_label = label
 end
 
-function CtrlTimeDown:setTimeTotal(num)
+function count_down:setTimeTotal(num)
     self.m_timeTotal = num
 end
 
-function CtrlTimeDown:start()
+function count_down:start()
     self:stop()
     self.m_timeCurrent = self.m_timeTotal
     self:showLabel(self.m_timeCurrent)
     self.m_scheduleID = cc.Director:getInstance():getScheduler():scheduleScriptFunc(handler(self,self.updateLabel),1,false)
 end
 
-function CtrlTimeDown:updateLabel()
+function count_down:updateLabel()
     if self.m_timeCurrent then
         if self.m_timeCurrent >= 0 then
             self.m_timeCurrent = self.m_timeCurrent - 1
@@ -115,19 +115,19 @@ function CtrlTimeDown:updateLabel()
     end
 end
 
-function CtrlTimeDown:releaseSchedule()
+function count_down:releaseSchedule()
     if self.m_scheduleID then
         cc.Director:getInstance():getScheduler():unscheduleScriptEntry(self.m_scheduleID)
         self.m_scheduleID = nil
     end
 end
 
-function CtrlTimeDown:stop()
+function count_down:stop()
     self:releaseSchedule()
     self.m_timeCurrent = 0
 end
 
-function CtrlTimeDown:setFontSize(size)
+function count_down:setFontSize(size)
     if self.m_labelType == type_label.text_normal then
         self.m_label:setSystemFontSize(size)
     elseif self.m_labelType == type_label.text_ttf then
@@ -135,13 +135,13 @@ function CtrlTimeDown:setFontSize(size)
     end
 end
 
-function CtrlTimeDown:setFontColor(color)
+function count_down:setFontColor(color)
     if self.m_labelType == type_label.text_normal or self.m_labelType == type_label.text_ttf then
         self.m_label:setTextColor(color)
     end
 end
 
-function CtrlTimeDown:showLabel(_time)
+function count_down:showLabel(_time)
     if _time < 0 then
         _time = 0
     end
@@ -201,42 +201,42 @@ function CtrlTimeDown:showLabel(_time)
     end
 end
 
-function CtrlTimeDown:setFormat(name)
+function count_down:setFormat(name)
     self.m_nShowFormat = name
 end
 
-function CtrlTimeDown:setTimeDownCallFunc(func)
+function count_down:setTimeDownCallFunc(func)
     self.m_callFunc = func
 end
 
-function CtrlTimeDown:setLabelLeft(str)
+function count_down:setLabelLeft(str)
     self.m_strLeft = str
 end
 
-function CtrlTimeDown:setLabelRight(str)
+function count_down:setLabelRight(str)
     self.m_strRight = str
 end
 
-function CtrlTimeDown:getCurrentTime()
+function count_down:getCurrentTime()
     return self.m_timeCurrent
 end
 
-function CtrlTimeDown:clearTimePointCallFunc()
+function count_down:clearTimePointCallFunc()
     self.m_timePointFunc = {}
 end
 
-function CtrlTimeDown:addTimePointCallFunc(num,func)
+function count_down:addTimePointCallFunc(num,func)
     self.m_timePointFunc = self.m_timePointFunc or {}
     self.m_timePointFunc[#self.m_timePointFunc + 1] = {time = num,func = func}
 end
 
-function CtrlTimeDown:enableOutline(_color,_size)
+function count_down:enableOutline(_color,_size)
     if self.m_labelType == type_label.text_ttf then
         self.m_label:enableOutline(_color,_size)
     end
 end
 
-function CtrlTimeDown:add_update_label(label, index)
+function count_down:add_update_label(label, index)
     self.table_label = self.table_label or {}
     if index then
         self.table_label[index] = label
@@ -245,4 +245,4 @@ function CtrlTimeDown:add_update_label(label, index)
     end
 end
 
-return CtrlTimeDown
+return count_down
