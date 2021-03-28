@@ -112,4 +112,54 @@ function public_module.playJumpAction(node, tag, scale)
     end
 end
 
+function public_module.create_area_line(size)
+    local _node = cc.DrawNode:create()
+    local _width = size.width
+    local _height = size.height
+    _node:drawSegment(cc.p(-_width / 2, _height / 2),cc.p(_width / 2, _height / 2), 2,cc.c4f(1,1,1,1))
+    _node:drawSegment(cc.p(-_width / 2, _height / 2),cc.p(-_width / 2, -_height / 2), 2,cc.c4f(1,1,1,1))
+    _node:drawSegment(cc.p(_width / 2, _height / 2),cc.p(_width / 2, -_height / 2), 2,cc.c4f(1,1,1,1))
+    _node:drawSegment(cc.p(-_width / 2, -_height / 2),cc.p(_width / 2, -_height / 2), 2,cc.c4f(1,1,1,1))
+    return _node
+end
+
+
+function public_module.create_direct(node_par, position, rotation, scale)
+    local _sprite_direct = cc.Sprite:create("public_res/direct.png")
+    node_par:addChild(_sprite_direct)
+    if position then
+        _sprite_direct:setPosition(position)
+    end
+    scale = scale or 0.5
+    _sprite_direct:setScale(scale)
+    node_par.sprite_direct = _sprite_direct
+    _sprite_direct:setVisible(false)
+
+    if rotation then
+        _sprite_direct:setRotation(rotation)
+    end
+    if rotation == 90 then
+        _sprite_direct:runAction(cc.RepeatForever:create(cc.Sequence:create(
+            cc.MoveBy:create(0.5, cc.p(0, -20)),
+            cc.MoveBy:create(0.5, cc.p(0, 20))
+        )))
+    elseif rotation == nil or rotation == 0 then
+        _sprite_direct:runAction(cc.RepeatForever:create(cc.Sequence:create(
+            cc.MoveBy:create(0.5, cc.p(20, 0)),
+            cc.MoveBy:create(0.5, cc.p(-20, 0))
+        )))
+    elseif rotation == 270 then
+        _sprite_direct:runAction(cc.RepeatForever:create(cc.Sequence:create(
+            cc.MoveBy:create(0.5, cc.p(0, 20)),
+            cc.MoveBy:create(0.5, cc.p(0, -20))
+        )))
+    elseif rotation == 180 then
+        _sprite_direct:runAction(cc.RepeatForever:create(cc.Sequence:create(
+            cc.MoveBy:create(0.5, cc.p(-20, 0)),
+            cc.MoveBy:create(0.5, cc.p(20, 0))
+        )))
+    end
+end
+
+
 return public_module

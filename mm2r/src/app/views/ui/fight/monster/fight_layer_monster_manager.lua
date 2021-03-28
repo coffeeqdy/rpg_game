@@ -1,19 +1,18 @@
-local game_monster = require("app.views.ui.monster.game_monster")
+local game_monster = require("app.views.ui.fight.monster.game_monster")
 
-local game_fight_layer = class("game_fight_layer", cc.Node)
+local game_fight_layer = {}
 
-function game_fight_layer:ctor()
+local boss_position = cc.p(-320, 100)
+
+local normal_position = {
+    x_area = {-440,0},
+    y_area = {-100,300}
+}
+
+function game_fight_layer:init_monster_manager()
     self.monster_list = {}
-    self.body_list = {}
-
     self.node_monster_manager = cc.Node:create()
     self:addChild(self.node_monster_manager)
-end
-
-function game_fight_layer:show(monster_list)
-    self:setVisible(true)
-    self:render_player_list()
-    self:render_monster_list(monster_list)
 end
 
 function game_fight_layer:render_monster_list(monster_list)
@@ -43,24 +42,13 @@ end
 
 function game_fight_layer:on_fresh_monster(node, data)
     node:set_id(data)
-end
-
-function game_fight_layer:on_remove_monster(node)
-    for i,v in pairs(self.monster_list) do
-        if v == node then
-            table.remove(self.monster_list, i)
-            break
-        end
+    if node:is_boss() then
+        node:setPosition(boss_position)
+    else
+        local _x = math.random(normal_position.x_area[1], normal_position.x_area[2])
+        local _y = math.random(normal_position.y_area[1], normal_position.y_area[2])
+        node:setPosition(_x, _y)
     end
-    if tolua.isnull(node) then
-        node = nil
-        return
-    end
-    node:removeFromParent()
-    node = nil
-end
-
-function game_fight_layer:render_player_list()
 end
 
 return game_fight_layer

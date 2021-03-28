@@ -2,6 +2,7 @@
 
 local global_define = require("app.public.global.global_define")
 local ui_observer = require("app.public.util.ui_observer")
+local game_map_square = require("app.views.ui.map.game_map_square")
 
 local g_move_size = 32--每格的距离
 local g_view_width = 352--11格
@@ -34,10 +35,8 @@ function game_map:ctor()
 end
 
 function game_map:create_square()
-    local _square = cc.CSLoader:createNode("game/map_square.csb")
-    _square.sprite_square = _square:getChildByName("sprite_square")
-    _square.sprite_surprise = _square:getChildByName("sprite_surprise")
-    return _square
+    local _node_square = game_map_square.new(g_move_size)
+    return _node_square
 end
 
 function game_map:on_move_left(tag)
@@ -82,6 +81,7 @@ function game_map:check_move()
     if _x_speed == 0 and _y_speed == 0 then
         self:stopActionByTag(1001)
     else
+        self:stopActionByTag(1001)
         local _action = cc.RepeatForever:create(
             cc.MoveBy:create(1,cc.p(_x_speed,_y_speed))
         )
@@ -92,6 +92,25 @@ end
 
 function game_map:is_moving()
     return self.is_left == 1 or self.is_right == 1 or self.is_up == 1 or self.is_down == 1
+end
+
+function game_map:get_collect_square(body)
+    local _pt = body:convertToWorldSpace(cc.p(0,0))
+    for i = 1, #self.table_squares do
+        for j = 1, #self.table_squares[i] do
+            if self.table_squares[i][j]:conntain_point(_pt) then
+                return self.table_squares[i][j]
+            end
+        end
+    end
+end
+
+function game_map:on_reset_move_state()
+    self.is_left = 0
+    self.is_right = 0
+    self.is_up = 0
+    self.is_down = 0
+    self:stopActionByTag(1001)
 end
 
 return game_map

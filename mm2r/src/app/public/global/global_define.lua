@@ -1,6 +1,7 @@
 local global_define = {
     observer_type = {
         operate = "operate",
+        fight = "fight",
     },
     observer_name = {
         move_left_press = "move_left_press",
@@ -12,6 +13,8 @@ local global_define = {
         move_up_release = "move_up_release",
         move_down_release = "move_down_release",
         move_right_release = "move_right_release",
+
+        start_fight = "start_fight",
     }
 }
 

@@ -1,10 +1,9 @@
 local global_define = require("app.public.global.global_define")
 local ui_observer = require("app.public.util.ui_observer")
 
-local game_map = require("app.views.ui.game_map")
-local game_body = require("app.views.ui.game_body")
-local game_menu = require("app.views.ui.game_menu")
-local game_fight_layer = require("app.views.ui.game_fight_layer")
+local game_map = require("app.views.ui.map.game_map")
+local game_body = require("app.views.ui.map.game_body")
+local game_menu = require("app.views.ui.menu.game_menu")
 
 local _M = {}
 
@@ -17,12 +16,13 @@ function _M:init_layer_game()
     local _node_clip = cc.ClippingNode:create()
     self:addChild(_node_clip)
     local _sprite_stencil = ccui.Scale9Sprite:create("public_res/stencil.png")
-    _sprite_stencil:setContentSize(cc.size(200,200))
+    _sprite_stencil:setContentSize(cc.size(600,600))
     _node_clip:setStencil(_sprite_stencil)
     _node_clip:setInverted(false)
 
     self.layer_game = cc.CSLoader:createNode('game/layer_game.csb')
     _node_clip:addChild(self.layer_game)
+    _node_clip:setPosition(display.cx / 2, 0)
 
     --地图在下
     self.game_map = game_map.new()
@@ -37,11 +37,6 @@ function _M:init_layer_game()
     self.layer_game:addChild(self.game_menu, 3)
     self.game_menu:setVisible(false)
 
-    --战斗场景
-    self.game_fight_layer = game_fight_layer.new()
-    self.layer_game:addChild(self.game_fight_layer, 3)
-    self.game_fight_layer:setVisible(false)
-
     self:init_value()
 
     self:register_game_listener()
@@ -49,57 +44,46 @@ function _M:init_layer_game()
 end
 
 function _M:register_game_listener()
+    --按下
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_left_press, function()
-        if self.game_menu:isVisible() then
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_left(1)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_right_press, function()
-        if self.game_menu:isVisible() then
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_right(1)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_up_press, function()
-        if self.game_menu:isVisible() then
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_up(1)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_down_press, function()
-        if self.game_menu:isVisible() then
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_down(1)
     end)
-    
+    --抬起
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_left_release, function()
-        if self.game_menu:isVisible() then
-            self.game_menu:on_move_left()
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_left(2)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_right_release, function()
-        if self.game_menu:isVisible() then
-            self.game_menu:on_move_right()
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_right(2)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_up_release, function()
-        if self.game_menu:isVisible() then
-            self.game_menu:on_move_up()
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_up(2)
     end)
     ui_observer.get_instance():register_listener(global_define.observer_type.operate, global_define.observer_name.move_down_release, function()
-        if self.game_menu:isVisible() then
-            self.game_menu:on_move_down()
-            return
-        end
+        if self.game_fight_layer:isVisible() then return end
+        if self.game_menu:isVisible() then return end
         self.game_map:on_move_down(2)
     end)
 end
@@ -125,7 +109,7 @@ function _M:register_schedule()
 end
 
 function _M:get_safe_time()
-    return 4
+    return 1
 end
 
 function _M:check_meet_monster()
@@ -134,7 +118,7 @@ function _M:check_meet_monster()
     local _num_random = math.random(1, 10000)
     if _num_random < _percent then
         local _monster_data = _square:get_monster_list()
-        self.game_fight_layer:show(_monster_data)
+        ui_observer.get_instance():send_event(global_define.observer_type.fight,global_define.observer_name.start_fight,_monster_data)
         return true
     end
     return false
