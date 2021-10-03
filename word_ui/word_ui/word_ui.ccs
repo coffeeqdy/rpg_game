@@ -1,0 +1,13 @@
+<Solution>
+  <PropertyGroup Name="word_ui" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="scene">
+          <Project Name="layer_main.csd" Type="Node" />
+          <Project Name="ui_fight_user.csd" Type="Node" />
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>
