@@ -1,0 +1,984 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D6DF21B-13CA-3875-AC49-8F8B93A0CEF9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>word</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\rpg_game\word\win32-build\bin\word\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">word.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">word</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\rpg_game\word\win32-build\bin\word\Release</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">word.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">word</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\rpg_game\word\win32-build\bin\word\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">word.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">word</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\rpg_game\word\win32-build\bin\word\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">word.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">word</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRLUASTATIC;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRLUASTATIC;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/word/win32-build/bin/word/Debug/lua51.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libssl-1_1.dll G:/rpg_game/word/win32-build/bin/word/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libcrypto-1_1.dll G:/rpg_game/word/win32-build/bin/word/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/uv/prebuilt/win32/uv.dll G:/rpg_game/word/win32-build/bin/word/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/websockets/prebuilt/win32/websockets.dll G:/rpg_game/word/win32-build/bin/word/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/curl/prebuilt/win32/libcurl.dll G:/rpg_game/word/win32-build/bin/word/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/gles/prebuilt/glew32.dll G:/rpg_game/word/win32-build/bin/word/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/icon/prebuilt/iconv.dll G:/rpg_game/word/win32-build/bin/word/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll G:/rpg_game/word/win32-build/bin/word/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libogg.dll G:/rpg_game/word/win32-build/bin/word/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll G:/rpg_game/word/win32-build/bin/word/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll G:/rpg_game/word/win32-build/bin/word/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll G:/rpg_game/word/win32-build/bin/word/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll G:/rpg_game/word/win32-build/bin/word/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Debug\luacocos2d.lib;lib\Debug\cocos2d.lib;lib\Debug\external.lib;..\frameworks\cocos2d-x\external\Box2D\prebuilt\win32\debug\libbox2d.lib;..\frameworks\cocos2d-x\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;..\frameworks\cocos2d-x\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;..\frameworks\cocos2d-x\external\bullet\prebuilt\win32\debug\libbullet.lib;..\frameworks\cocos2d-x\external\jpeg\prebuilt\win32\libjpeg.lib;..\frameworks\cocos2d-x\external\webp\prebuilt\win32\libwebp.lib;..\frameworks\cocos2d-x\external\websockets\prebuilt\win32\websockets.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libssl.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libcrypto.lib;..\frameworks\cocos2d-x\external\uv\prebuilt\win32\uv_a.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;..\frameworks\cocos2d-x\external\curl\prebuilt\win32\libcurl.lib;..\frameworks\cocos2d-x\external\png\prebuilt\win32\libpng.lib;..\frameworks\cocos2d-x\external\win32-specific\gles\prebuilt\glew32.lib;..\frameworks\cocos2d-x\external\win32-specific\icon\prebuilt\libiconv.lib;..\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\frameworks\cocos2d-x\external\glfw3\prebuilt\win32\glfw3.lib;..\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;..\frameworks\cocos2d-x\external\lua\luajit\prebuilt\win32\lua51.lib;lib\Debug\ext_tolua.lib;lib\Debug\ext_luasocket.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>G:/rpg_game/word/win32-build/Debug/word.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/rpg_game/word/win32-build/bin/word/Debug/word.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/word/win32-build/bin/word/Release/lua51.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libssl-1_1.dll G:/rpg_game/word/win32-build/bin/word/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libcrypto-1_1.dll G:/rpg_game/word/win32-build/bin/word/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/uv/prebuilt/win32/uv.dll G:/rpg_game/word/win32-build/bin/word/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/websockets/prebuilt/win32/websockets.dll G:/rpg_game/word/win32-build/bin/word/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/curl/prebuilt/win32/libcurl.dll G:/rpg_game/word/win32-build/bin/word/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/gles/prebuilt/glew32.dll G:/rpg_game/word/win32-build/bin/word/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/icon/prebuilt/iconv.dll G:/rpg_game/word/win32-build/bin/word/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll G:/rpg_game/word/win32-build/bin/word/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libogg.dll G:/rpg_game/word/win32-build/bin/word/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll G:/rpg_game/word/win32-build/bin/word/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll G:/rpg_game/word/win32-build/bin/word/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll G:/rpg_game/word/win32-build/bin/word/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll G:/rpg_game/word/win32-build/bin/word/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\luacocos2d.lib;lib\Release\cocos2d.lib;lib\Release\external.lib;..\frameworks\cocos2d-x\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\frameworks\cocos2d-x\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\frameworks\cocos2d-x\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;..\frameworks\cocos2d-x\external\bullet\prebuilt\win32\release\libbullet.lib;..\frameworks\cocos2d-x\external\jpeg\prebuilt\win32\libjpeg.lib;..\frameworks\cocos2d-x\external\webp\prebuilt\win32\libwebp.lib;..\frameworks\cocos2d-x\external\websockets\prebuilt\win32\websockets.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libssl.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libcrypto.lib;..\frameworks\cocos2d-x\external\uv\prebuilt\win32\uv_a.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;..\frameworks\cocos2d-x\external\curl\prebuilt\win32\libcurl.lib;..\frameworks\cocos2d-x\external\png\prebuilt\win32\libpng.lib;..\frameworks\cocos2d-x\external\win32-specific\gles\prebuilt\glew32.lib;..\frameworks\cocos2d-x\external\win32-specific\icon\prebuilt\libiconv.lib;..\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\frameworks\cocos2d-x\external\glfw3\prebuilt\win32\glfw3.lib;..\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;..\frameworks\cocos2d-x\external\lua\luajit\prebuilt\win32\lua51.lib;lib\Release\ext_tolua.lib;lib\Release\ext_luasocket.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>G:/rpg_game/word/win32-build/Release/word.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/rpg_game/word/win32-build/bin/word/Release/word.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/lua51.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libssl-1_1.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libcrypto-1_1.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/uv/prebuilt/win32/uv.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/websockets/prebuilt/win32/websockets.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/curl/prebuilt/win32/libcurl.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/gles/prebuilt/glew32.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/icon/prebuilt/iconv.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libogg.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll G:/rpg_game/word/win32-build/bin/word/MinSizeRel/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\MinSizeRel\luacocos2d.lib;lib\MinSizeRel\cocos2d.lib;lib\MinSizeRel\external.lib;..\frameworks\cocos2d-x\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\frameworks\cocos2d-x\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\frameworks\cocos2d-x\external\freetype2\prebuilt\win32\freetype.lib;lib\MinSizeRel\ext_recast.lib;..\frameworks\cocos2d-x\external\bullet\prebuilt\win32\release\libbullet.lib;..\frameworks\cocos2d-x\external\jpeg\prebuilt\win32\libjpeg.lib;..\frameworks\cocos2d-x\external\webp\prebuilt\win32\libwebp.lib;..\frameworks\cocos2d-x\external\websockets\prebuilt\win32\websockets.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libssl.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libcrypto.lib;..\frameworks\cocos2d-x\external\uv\prebuilt\win32\uv_a.lib;lib\MinSizeRel\ext_tinyxml2.lib;lib\MinSizeRel\ext_xxhash.lib;lib\MinSizeRel\ext_xxtea.lib;lib\MinSizeRel\ext_clipper.lib;lib\MinSizeRel\ext_edtaa3func.lib;lib\MinSizeRel\ext_convertUTF.lib;lib\MinSizeRel\ext_poly2tri.lib;lib\MinSizeRel\ext_md5.lib;..\frameworks\cocos2d-x\external\curl\prebuilt\win32\libcurl.lib;..\frameworks\cocos2d-x\external\png\prebuilt\win32\libpng.lib;..\frameworks\cocos2d-x\external\win32-specific\gles\prebuilt\glew32.lib;..\frameworks\cocos2d-x\external\win32-specific\icon\prebuilt\libiconv.lib;..\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\frameworks\cocos2d-x\external\glfw3\prebuilt\win32\glfw3.lib;..\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\MinSizeRel\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;..\frameworks\cocos2d-x\external\lua\luajit\prebuilt\win32\lua51.lib;lib\MinSizeRel\ext_tolua.lib;lib\MinSizeRel\ext_luasocket.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>G:/rpg_game/word/win32-build/MinSizeRel/word.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/rpg_game/word/win32-build/bin/word/MinSizeRel/word.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_USRLUASTATIC;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>G:\rpg_game\word\frameworks\runtime-src\Classes;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\auto;G:\rpg_game\word\frameworks\cocos2d-x\cocos\scripting\lua-bindings\manual;G:\rpg_game\word\frameworks\cocos2d-x;G:\rpg_game\word\frameworks\cocos2d-x\cocos;G:\rpg_game\word\frameworks\cocos2d-x\extensions;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform;G:\rpg_game\word\frameworks\cocos2d-x\cocos\editor-support;G:\rpg_game\word\frameworks\cocos2d-x\cocos\base;G:\rpg_game\word\frameworks\cocos2d-x\cocos\audio\include;G:\rpg_game\word\frameworks\cocos2d-x\cocos\platform\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\recast\..;G:\rpg_game\word\frameworks\cocos2d-x\external\tinyxml2\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxhash\.;G:\rpg_game\word\frameworks\cocos2d-x\external\xxtea\.;G:\rpg_game\word\frameworks\cocos2d-x\external\clipper\.;G:\rpg_game\word\frameworks\cocos2d-x\external\edtaa3func\.;G:\rpg_game\word\frameworks\cocos2d-x\external\ConvertUTF\.;G:\rpg_game\word\frameworks\cocos2d-x\external\poly2tri\..;G:\rpg_game\word\frameworks\cocos2d-x\external\md5\..;G:\rpg_game\word\frameworks\cocos2d-x\external\unzip\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\tolua\.;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luasocket\..;G:\rpg_game\word\frameworks\cocos2d-x\external\Box2D\include;G:\rpg_game\word\frameworks\cocos2d-x\external\chipmunk\include;G:\rpg_game\word\frameworks\cocos2d-x\external\freetype2\include\win32\freetype2;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include;G:\rpg_game\word\frameworks\cocos2d-x\external\bullet\include\bullet;G:\rpg_game\word\frameworks\cocos2d-x\external\jpeg\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\openssl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\uv\include;G:\rpg_game\word\frameworks\cocos2d-x\external\webp\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\websockets\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\curl\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\png\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\gles\include\OGLES;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\icon\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OggDecoder\include;G:\rpg_game\word\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\include;G:\rpg_game\word\frameworks\cocos2d-x\external\glfw3\include\win32;G:\rpg_game\word\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\include;G:\rpg_game\word\frameworks\cocos2d-x\external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>
+      </Message>
+      <Command>setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/lua/luajit/prebuilt/win32/lua51.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/lua51.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libssl-1_1.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/openssl/prebuilt/win32/libcrypto-1_1.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/uv/prebuilt/win32/uv.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/websockets/prebuilt/win32/websockets.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/curl/prebuilt/win32/libcurl.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/gles/prebuilt/glew32.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/icon/prebuilt/iconv.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libogg.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_if_different G:/rpg_game/word/frameworks/cocos2d-x/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\RelWithDebInfo\luacocos2d.lib;lib\RelWithDebInfo\cocos2d.lib;lib\RelWithDebInfo\external.lib;..\frameworks\cocos2d-x\external\Box2D\prebuilt\win32\release\libbox2d.lib;..\frameworks\cocos2d-x\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;..\frameworks\cocos2d-x\external\freetype2\prebuilt\win32\freetype.lib;lib\RelWithDebInfo\ext_recast.lib;..\frameworks\cocos2d-x\external\bullet\prebuilt\win32\release\libbullet.lib;..\frameworks\cocos2d-x\external\jpeg\prebuilt\win32\libjpeg.lib;..\frameworks\cocos2d-x\external\webp\prebuilt\win32\libwebp.lib;..\frameworks\cocos2d-x\external\websockets\prebuilt\win32\websockets.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libssl.lib;..\frameworks\cocos2d-x\external\openssl\prebuilt\win32\libcrypto.lib;..\frameworks\cocos2d-x\external\uv\prebuilt\win32\uv_a.lib;lib\RelWithDebInfo\ext_tinyxml2.lib;lib\RelWithDebInfo\ext_xxhash.lib;lib\RelWithDebInfo\ext_xxtea.lib;lib\RelWithDebInfo\ext_clipper.lib;lib\RelWithDebInfo\ext_edtaa3func.lib;lib\RelWithDebInfo\ext_convertUTF.lib;lib\RelWithDebInfo\ext_poly2tri.lib;lib\RelWithDebInfo\ext_md5.lib;..\frameworks\cocos2d-x\external\curl\prebuilt\win32\libcurl.lib;..\frameworks\cocos2d-x\external\png\prebuilt\win32\libpng.lib;..\frameworks\cocos2d-x\external\win32-specific\gles\prebuilt\glew32.lib;..\frameworks\cocos2d-x\external\win32-specific\icon\prebuilt\libiconv.lib;..\frameworks\cocos2d-x\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libogg.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;..\frameworks\cocos2d-x\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;..\frameworks\cocos2d-x\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;..\frameworks\cocos2d-x\external\glfw3\prebuilt\win32\glfw3.lib;..\frameworks\cocos2d-x\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\RelWithDebInfo\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;..\frameworks\cocos2d-x\external\lua\luajit\prebuilt\win32\lua51.lib;lib\RelWithDebInfo\ext_tolua.lib;lib\RelWithDebInfo\ext_luasocket.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>G:/rpg_game/word/win32-build/RelWithDebInfo/word.lib</ImportLibrary>
+      <ProgramDataBaseFile>G:/rpg_game/word/win32-build/bin/word/RelWithDebInfo/word.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="G:\rpg_game\word\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule G:/rpg_game/word/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/word -BG:/rpg_game/word/win32-build --check-stamp-file G:/rpg_game/word/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildHelpers.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildSet.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDefine.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDepend.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">G:\rpg_game\word\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule G:/rpg_game/word/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/word -BG:/rpg_game/word/win32-build --check-stamp-file G:/rpg_game/word/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildHelpers.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildSet.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDefine.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDepend.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">G:\rpg_game\word\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule G:/rpg_game/word/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/word -BG:/rpg_game/word/win32-build --check-stamp-file G:/rpg_game/word/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildHelpers.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildSet.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDefine.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDepend.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">G:\rpg_game\word\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule G:/rpg_game/word/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SG:/rpg_game/word -BG:/rpg_game/word/win32-build --check-stamp-file G:/rpg_game/word/win32-build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCCompilerABI.c;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeDetermineSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeFindBinUtils.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeInitializeConfigs.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeLanguageInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCCompiler.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystem.cmake.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CMakeTestRCCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Internal\FeatureTesting.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\Windows.cmake;C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.18\Modules\Platform\WindowsPaths.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildHelpers.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosBuildSet.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDefine.cmake;G:\rpg_game\word\frameworks\cocos2d-x\cmake\Modules\CocosConfigDepend.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeCXXCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeRCCompiler.cmake;G:\rpg_game\word\win32-build\CMakeFiles\3.18.20081302-MSVC_2\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">G:\rpg_game\word\win32-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="G:\rpg_game\word\frameworks\runtime-src\Classes\AppDelegate.h" />
+    <ClInclude Include="G:\rpg_game\word\frameworks\runtime-src\proj.win32\main.h" />
+    <ClCompile Include="G:\rpg_game\word\frameworks\runtime-src\Classes\AppDelegate.cpp" />
+    <ClCompile Include="G:\rpg_game\word\frameworks\runtime-src\proj.win32\main.cpp" />
+    <ClInclude Include="G:\rpg_game\word\res\HelloWorld.png" />
+    <ClInclude Include="G:\rpg_game\word\src\app\MyApp.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\app\views\MainScene.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\3d\3dConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\Cocos2d.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\Cocos2dConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\DeprecatedCocos2dClass.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\DeprecatedCocos2dEnum.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\DeprecatedCocos2dFunc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\DrawPrimitives.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\bitExtend.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\deprecated.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\functions.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\json.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\luaj.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocos2d\luaoc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocosdenshion\AudioEngine.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocostudio\CocoStudio.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocostudio\DeprecatedCocoStudioClass.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocostudio\DeprecatedCocoStudioFunc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\cocostudio\StudioConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\controller\ControllerConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\extension\DeprecatedExtensionClass.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\extension\DeprecatedExtensionEnum.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\extension\DeprecatedExtensionFunc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\extension\ExtensionConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\components\event.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\device.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\display.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\LayerEx.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\MenuEx.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\NodeEx.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\SpriteEx.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UICheckBox.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UIEditBox.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UIListView.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UIPageView.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UIScrollView.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UISlider.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UITextField.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\extends\UIWidget.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\init.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\package_support.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\framework\transition.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\init.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\network\DeprecatedNetworkClass.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\network\DeprecatedNetworkEnum.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\network\DeprecatedNetworkFunc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\network\NetworkConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\physics3d\physics3d-constants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\spine\SpineConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\ui\DeprecatedUIEnum.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\ui\DeprecatedUIFunc.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\cocos\ui\GuiConstants.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\config.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\main.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\packages\mvc\AppBase.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\packages\mvc\ViewBase.lua" />
+    <ClInclude Include="G:\rpg_game\word\src\packages\mvc\init.lua" />
+    <ClCompile Include="G:\rpg_game\word\frameworks\cocos2d-x\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\ZERO_CHECK.vcxproj">
+      <Project>{2891A915-8D2A-387B-8E98-82A4830BD6EB}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\COPY_LUA-word.vcxproj">
+      <Project>{7F30616D-2C31-3CEA-B118-482A73D82537}</Project>
+      <Name>COPY_LUA-word</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\SYNC_RESOURCE-word.vcxproj">
+      <Project>{EFAEEB26-6091-3F7E-8CF3-780DBA97D9B9}</Project>
+      <Name>SYNC_RESOURCE-word</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{BBB53C2C-78DE-3204-A974-420A23666068}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{47CD34A0-6EAA-3752-A6BF-53D814BDCD21}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{44587C80-B06D-33B4-8A71-BD03445C2210}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{E52E8B26-B178-3037-AB11-50AC47EA63F1}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\lua\luasocket\ext_luasocket.vcxproj">
+      <Project>{DD4FD2F5-9F78-3048-9405-D8E37C176279}</Project>
+      <Name>ext_luasocket</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\md5\ext_md5.vcxproj">
+      <Project>{49D88021-9789-32E6-85AC-DBE7866CB837}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{0A03E265-C51E-3039-B976-ADD1E080B5CE}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\recast\ext_recast.vcxproj">
+      <Project>{B99AD3C2-4558-30E5-84D2-AD78FBBB33A2}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{B9A07BA6-4EFB-3F7A-937B-55AC525F140A}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\lua\tolua\ext_tolua.vcxproj">
+      <Project>{9793E1C3-A376-37B9-93D2-ED2800F762AD}</Project>
+      <Name>ext_tolua</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{93500A53-247F-3D86-93E8-8DC3A0BB0A10}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{5367720F-2CD2-373D-8E82-6AB9A1CDC76B}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{894AA61D-5683-32E7-BA8A-FF1B1EC9B299}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\external\external.vcxproj">
+      <Project>{37A74A5F-209C-3699-B6DD-D12FBADF01B2}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+    <ProjectReference Include="G:\rpg_game\word\win32-build\engine\cocos\lua-bindings\luacocos2d.vcxproj">
+      <Project>{A57B4CF0-532C-3107-B3A5-BFF32462EAF8}</Project>
+      <Name>luacocos2d</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
