@@ -3,7 +3,15 @@
   <SolutionFolder>
     <Group ctype="ResourceGroup">
       <RootFolder Name=".">
+        <Folder Name="public">
+          <Folder Name="fonts">
+            <TTF Name="FZZY.TTF" />
+          </Folder>
+        </Folder>
         <Folder Name="scene">
+          <Image Name="blood_bar.png" />
+          <Image Name="blood_bg.png" />
+          <Image Name="btn_bg.png" />
           <Project Name="layer_main.csd" Type="Node" />
           <Project Name="ui_fight_user.csd" Type="Node" />
         </Folder>
