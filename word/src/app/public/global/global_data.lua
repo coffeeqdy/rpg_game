@@ -7,11 +7,8 @@ local global_data = {}
 function global_data.load()
     --读取全局变量
     g_data = {}
-    g_data.move_speed = 200
-    g_data.map_config = map_config
-    g_data.monster_config = monster_config
     g_data.player = {[1]=body_data.new()}
-    g_data.enemy_attack = 2--敌袭概率
+    g_data.language = 0--默认中文
 end
 
 return global_data

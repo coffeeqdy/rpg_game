@@ -161,5 +161,71 @@ function public_module.create_direct(node_par, position, rotation, scale)
     end
 end
 
+--[[
+    @desc: 
+    author:{author}
+    time:2020-11-06 11:37:35
+    --@_nodes:节点table顺序严格要求从左到右边 从上到下
+	--@_direction:方向,"x"横向,"y"纵向 "x-left"左到右 "x-mid" 横向居中 "y-bottom" 纵向从下往上
+	--@_node_bg:底图，_node_bg.table_size 初始尺寸
+	--@pt_begin:初始点位，如果不传，则认为是整体居中
+	--@num_space:节点单位间隔
+	--@num_node_count: 节点数
+    @return:
+]]
+function public_module.ui_node_sort(_nodes,_direction,_node_bg, pt_begin, num_space, num_node_count)
+    if _nodes == nil or not next(_nodes) then return end
+    if _direction == nil then return end
+    
+    num_node_count = num_node_count or table.nums(_nodes)
+    if _direction =="y-top" or _direction == "y-bottom" or "y-mid"
+    or _direction =="x-left" or _direction =="x-mid" or _direction =="x-right" then
+        local _node_positions={}
+        num_space = num_space or 100
+        local _node_isVisible={}
+        for j = 1, num_node_count do
+            if _nodes[j] and not tolua.isnull(_nodes[j]) and _nodes[j]:isVisible() then
+                _node_isVisible[#_node_isVisible + 1]=_nodes[j]
+            end
+        end
+        pt_begin = pt_begin or cc.p(0,0)
+        local _total_space = num_space * (#_node_isVisible - 1)
+        for i = 1, #_node_isVisible do
+            if _direction=="y-top" then
+                _node_positions[i] = pt_begin.y - (i - 1) * num_space
+            elseif _direction == "y-mid" then
+                _node_positions[i] = pt_begin.y - (i - 1) * num_space + _total_space / 2
+            elseif _direction=="y-bottom" then
+                _node_positions[i] = pt_begin.y + (i - 1) * num_space
+            elseif _direction=="x-left" then
+                _node_positions[i] = pt_begin.x + (i - 1) * num_space
+            elseif _direction=="x-mid" then
+                _node_positions[i] = pt_begin.x + (i - 1) * num_space - _total_space / 2
+            elseif _direction=="x-right" then
+                _node_positions[i] = pt_begin.x - (i - 1) * num_space
+            end
+        end
+        for m = 1, #_node_isVisible do
+            if _direction=="y-top" or _direction=="y-bottom" or _direction=="y-mid" then
+                _node_isVisible[m]:setPosition(pt_begin.x, _node_positions[m])
+            else
+                _node_isVisible[m]:setPosition(_node_positions[m], pt_begin.y)
+            end
+        end
+        --临时处理，后续扩展
+        if _node_bg and not tolua.isnull(_node_bg) then
+            if not _node_bg.table_size then
+                local _size = _node_bg:getContentSize()
+                _node_bg.table_size = _size
+            end
+            if _direction =="y-top" or _direction=="y-bottom" or _direction=="y-mid" then
+                _node_bg:setContentSize(cc.size(_node_bg.table_size.width,_node_bg.table_size.height + _total_space))
+            else
+                _node_bg:setContentSize(cc.size(_node_bg.table_size.width + _total_space,_node_bg.table_size.height))
+            end
+        end
+    end
+end
+
 
 return public_module
