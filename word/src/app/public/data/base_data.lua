@@ -7,14 +7,18 @@ function base_data:init_base_data()
     self.base_def = 0
     self.base_hp = 0
     self.base_crit = 0--暴击率0~100
-    self.base_crit_hit = 2--暴击伤害率
+    self.base_crit_hit = 2--暴击伤害为普通2倍
     self.base_hit_area = 10--造成伤害浮动百分比
-    self.base_miss = 0--闪避率
+    self.base_evd = 0--闪避率
+    self.base_hit = 0--命中率
     
     self.base_fire = 0--火
     self.base_ice = 0--冰
     self.base_electric = 0--电
     self.base_voice = 0 --音
+
+    self.base_att_speed = 100--攻击速度
+    self.weapon_cd = 1--武器攻击间隔（徒手1秒）
 end
 
 function base_data:get_meta_data(key_name)

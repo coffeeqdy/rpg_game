@@ -9,6 +9,7 @@ function global_data.load()
     g_data = {}
     g_data.player = {[1]=body_data.new()}
     g_data.language = 0--默认中文
+    g_data.gate_id = 1--当前关卡
 end
 
 return global_data

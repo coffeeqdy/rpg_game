@@ -1,7 +1,6 @@
 
 local game_scene = class("game_scene", cc.Layer)
 local public_module = require("app.public.util.public_module")
-local global_define = require("app.public.global.global_define")
 local ui_observer = require("app.public.util.ui_observer")
 
 local layer_main = require("app.views.layer.layer_main")

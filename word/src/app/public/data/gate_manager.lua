@@ -1,3 +1,5 @@
+local gate_config = require("app.public.config")
+
 local gate_manager = class("gate_manager")
 
 local _instance = nil
