@@ -8,8 +8,9 @@
           <FilePathData Path="game/res/world_map.csi" />
           <FilePathData Path="game/map_square.csd" />
           <FilePathData Path="game/layer_fight.csd" />
+          <FilePathData Path="game/game_body.csd" />
         </OpenedDocuments>
-        <ActiveDocument Path="game/layer_fight.csd" />
+        <ActiveDocument Path="game/res/world_map.csi" />
       </Value>
     </Item>
     <Item Key="CocosRecentOperation">

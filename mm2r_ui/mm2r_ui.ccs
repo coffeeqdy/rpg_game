@@ -1030,10 +1030,11 @@
             <Image Name="joystick.png" />
             <PlistInfo Name="world_map.csi" Type="Plist" />
           </Folder>
+          <Project Name="game_body.csd" Type="Node" />
+          <Project Name="layer_fight.csd" Type="Node" />
           <Project Name="layer_game.csd" Type="Node" />
           <Project Name="layer_operate.csd" Type="Node" />
           <Project Name="map_square.csd" Type="Node" />
-          <Project Name="layer_fight.csd" Type="Node" />
         </Folder>
       </RootFolder>
     </Group>
