@@ -4,6 +4,7 @@ local ui_fight_user = require("app.views.ui.ui_fight_user")
 local gate_manager = require("app.public.data.gate_manager")
 local enemy_manager = require("app.public.data.enemy_manager")
 local public_module = require("app.public.util.public_module")
+local string_config = require("app.public.string_config.string")
 
 local hurt_type = {
     miss = 1,
@@ -11,11 +12,15 @@ local hurt_type = {
     crit_hurt = 3
 }
 
+local max_count = 50
+
 function layer_auto_fight:init()
     self.node_root = cc.CSLoader:createNode("scene/layer_auto_fight.csb")
     self.node_player = self.node_root:getChildByName("node_player")
     self.node_enemy = self.node_root:getChildByName("node_enemy")
     --还需要一个关卡选择控件TODO
+    --战斗数据展示
+    self.list_view = self.node_root:getChildByName("list_view")
 end
 
 function layer_auto_fight:get_listen_list()
@@ -135,26 +140,89 @@ function layer_auto_fight:do_attack(node_att, node_def)
     if _hurt < 1 then
         _hurt = 1
     end
-    self:do_hurt(node_def, _hurt)
+    self:do_hurt(node_def, _hurt, _type == hurt_type.crit_hurt)
     self:do_print_fight(_first_data, _second_data, _type, _hurt)
 end
 
---闪避/未命中
+--闪避
 function layer_auto_fight:do_miss(node)
-
+    local _text = ccui.Text:create("躲闪","fonts/FZZY.TTF",30)
+    _text:setTextColor(cc.c3b(255,255,255))
+    node:addChild(_text)
+    _text:runAction(cc.Sequence:create(
+        cc.MoveBy:create(1, cc.p(0, 50)),
+        cc.Spawn:create(
+            cc.MoveBy:create(1, cc.p(0, 50)),
+            cc.FadeIn:create(1)
+        ),
+        cc.RemoveSelf:create()
+    ))
 end
 
 --造成伤害
-function layer_auto_fight:do_hurt(node, hurt)
+function layer_auto_fight:do_hurt(node, hurt, is_crit)
+    local _text = ccui.Text:create("-"..hurt,"fonts/FZZY.TTF",30)
+    _text:setTextColor(cc.c3b(255,88,88))
+    node:addChild(_text)
+    _text:runAction(cc.Sequence:create(
+        cc.MoveBy:create(1, cc.p(0, 50)),
+        cc.Spawn:create(
+            cc.MoveBy:create(1, cc.p(0, 50)),
+            cc.FadeIn:create(1)
+        ),
+        cc.RemoveSelf:create()
+    ))
+    if is_crit then
+        _text:runAction(cc.Sequence:create(
+            cc.ScaleTo:create(0.5, 1.5),
+            cc.ScaleTo:create(0.5, 1)
+        ))
+    end
 end
 
 --打印输出
 --in_type  1=闪避；2=普通伤害；3=暴击伤害
 function layer_auto_fight:do_print_fight(first_data, second_data, in_type, value)
-    if in_type == hurt_type.miss then
-    elseif in_type == hurt_type.hurt then
-    elseif in_type == hurt_type.crit_hurt then
+    local _items = self.list_view:getItems()
+    if #_items == max_count then
+        self.list_view:removeChild(_items[1])
     end
+    local _rich_text = ccui.RichText:create()
+    if in_type == hurt_type.miss then
+        local _element_text_1 = ccui.RichElementText:create(0,cc.c3b(172,95,31),255,first_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_2 = ccui.RichElementText:create(1,cc.c3b(244,5,0),255,string_config.attack .. ",","fonts/FZZY.TTF",16)
+        local _element_text_3 = ccui.RichElementText:create(2,cc.c3b(172,95,31),255,second_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_4 = ccui.RichElementText:create(3,cc.c3b(172,95,31),255,string_config.miss,"fonts/FZZY.TTF",16)
+        _rich_text:pushBackElement(_element_text_1)
+        _rich_text:pushBackElement(_element_text_2)
+        _rich_text:pushBackElement(_element_text_3)
+        _rich_text:pushBackElement(_element_text_4)
+    elseif in_type == hurt_type.hurt then
+        local _element_text_1 = ccui.RichElementText:create(0,cc.c3b(172,95,31),255,first_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_2 = ccui.RichElementText:create(1,cc.c3b(244,5,0),255,string_config.attack .. ",","fonts/FZZY.TTF",16)
+        local _element_text_3 = ccui.RichElementText:create(2,cc.c3b(172,95,31),255,second_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_4 = ccui.RichElementText:create(3,cc.c3b(172,95,31),255,string_config.hurt,"fonts/FZZY.TTF",16)
+        local _element_text_5 = ccui.RichElementText:create(4,cc.c3b(172,95,31),255,value,"fonts/FZZY.TTF",16)
+        _rich_text:pushBackElement(_element_text_1)
+        _rich_text:pushBackElement(_element_text_2)
+        _rich_text:pushBackElement(_element_text_3)
+        _rich_text:pushBackElement(_element_text_4)
+        _rich_text:pushBackElement(_element_text_5)
+    elseif in_type == hurt_type.crit_hurt then
+        local _element_text_1 = ccui.RichElementText:create(0,cc.c3b(172,95,31),255,first_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_2 = ccui.RichElementText:create(1,cc.c3b(244,5,0),255,string_config.attack .. string_config.crit .. ",","fonts/FZZY.TTF",16)
+        local _element_text_3 = ccui.RichElementText:create(2,cc.c3b(172,95,31),255,second_data.name,"fonts/FZZY.TTF",16)
+        local _element_text_4 = ccui.RichElementText:create(3,cc.c3b(172,95,31),255,string_config.hurt,"fonts/FZZY.TTF",16)
+        local _element_text_5 = ccui.RichElementText:create(4,cc.c3b(172,95,31),255,value,"fonts/FZZY.TTF",16)
+        _rich_text:pushBackElement(_element_text_1)
+        _rich_text:pushBackElement(_element_text_2)
+        _rich_text:pushBackElement(_element_text_3)
+        _rich_text:pushBackElement(_element_text_4)
+        _rich_text:pushBackElement(_element_text_5)
+    end
+    _rich_text:setAnchorPoint(cc.p(0, 0))
+    self.list_view:pushBackCustomItem(_rich_text)
+    self.list_view:jumpToBottom()
 end
 
 return layer_auto_fight
