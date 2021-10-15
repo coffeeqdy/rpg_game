@@ -17,6 +17,7 @@ function body_data:ctor()
     --总属性
     self.total_att = 0
     self.total_def = 0
+    self.total_hp = 0
 
     self.total_crit = 0--暴击率
     self.total_dmg = 0--暴击伤害倍数
@@ -30,6 +31,7 @@ function body_data:ctor()
 
     self.total_att_speed = 0 --攻击速度
     self.total_weapon_cd = 1
+
 
     self.equip = {}
     self.buff = {}
@@ -66,6 +68,7 @@ function body_data:on_calculate_total_data()
     self.total_electric = self.base_electric
     self.total_voice = self.base_voice
     self.total_att_speed = self.base_att_speed
+    self.total_hp = self.base_hp
     local _cur_weapon_cd = self.base_weapon_cd
     for equip_tag, equip_data in pairs(self.equip) do
         self.total_att = self.total_att + equip_data:get_meta_data("base_att")
@@ -79,6 +82,7 @@ function body_data:on_calculate_total_data()
         self.total_dmg = self.total_dmg + equip_data:get_meta_data("base_dmg")
         self.total_hit = self.total_hit + equip_data:get_meta_data("base_hit")
         self.total_evd = self.total_evd + equip_data:get_meta_data("base_evd")
+        self.total_hp = self.total_hp + equip_data:get_meta_data("base_hp")
         if equip_data:is_weapon() then
             _cur_weapon_cd = equip_data:get_weapon_cd()
         end
@@ -103,6 +107,10 @@ function body_data:get_attack_cd()
         _cd = global_define.cd_min
     end
     return _cd
+end
+
+function body_data:get_hp()
+    return self.total_hp
 end
 
 return body_data

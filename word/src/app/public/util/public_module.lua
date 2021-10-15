@@ -227,5 +227,19 @@ function public_module.ui_node_sort(_nodes,_direction,_node_bg, pt_begin, num_sp
     end
 end
 
+function public_module.delay_do(time, func)
+    local _scene = cc.Director:getInstance():getRunningScene()
+    if not _scene then return end
+    if not _scene.node_delay then
+        _scene.node_delay = cc.Node:create()
+        _scene:addChild(_scene.node_delay)
+    end
+    _scene.node_delay:runAction(cc.Sequence:create(
+        cc.DelayTime:create(time),
+        cc.CallFunc:create(function()
+            if func then func() end
+        end)
+    ))
+end
 
 return public_module

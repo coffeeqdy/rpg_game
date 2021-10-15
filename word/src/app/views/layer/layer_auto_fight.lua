@@ -45,12 +45,16 @@ function layer_auto_fight:reset_player_list()
     for i = 1, #_data do
         self:create_player(_data[i])
     end
+    public_module.ui_node_sort(self.node_player:getChildren(),"y-top",nil,nil,100)
 end
 
 function layer_auto_fight:create_player(player)
     local _node = cc.CSLoader:createNode("scene/ui_fight_user.csb")
     self.node_player:addChild(_node)
     _node.data = player
+    _node.hp = player:get_hp()
+    _node.loading_bar = _node:getChildByName("loading_bar")
+    _node.text_info = _node:getChildByName("text_info")
     _node:runAction(cc.RepeatForever:create(cc.Sequence:create(
         cc.DelayTime:create(player:get_attack_cd()),
         cc.CallFunc:create(function()
@@ -77,6 +81,9 @@ function layer_auto_fight:create_enemy(enemy)
     local _node = cc.CSLoader:createNode("scene/ui_fight_user.csb")
     self.node_enemy:addChild(_node)
     _node.data = enemy
+    _node.hp = enemy:get_hp()
+    _node.loading_bar = _node:getChildByName("loading_bar")
+    _node.text_info = _node:getChildByName("text_info")
     _node:runAction(cc.RepeatForever:create(cc.Sequence:create(
         cc.DelayTime:create(enemy:get_attack_cd()),
         cc.CallFunc:create(function()
@@ -161,6 +168,7 @@ end
 
 --造成伤害
 function layer_auto_fight:do_hurt(node, hurt, is_crit)
+    --飘字
     local _text = ccui.Text:create("-"..hurt,"fonts/FZZY.TTF",30)
     _text:setTextColor(cc.c3b(255,88,88))
     node:addChild(_text)
@@ -178,6 +186,30 @@ function layer_auto_fight:do_hurt(node, hurt, is_crit)
             cc.ScaleTo:create(0.5, 1)
         ))
     end
+    --伤害逻辑
+    local _data = node.data
+    node.hp = node.hp - hurt
+    if node.hp <= 0 then
+        node.hp = 0
+        self:do_body_dead(node)
+    end
+    self:render_hp(node)
+end
+
+function layer_auto_fight:render_hp(node)
+    node.loading_bar:setPencent(node.hp / node.data:get_hp() * 100)
+end
+
+function layer_auto_fight:do_body_dead(node)
+    node:runAction(cc.Sequence:create(
+        cc.Blink:create(0.5, 5),
+        cc.Show:create(),
+        cc.FadeIn:create(0.5),
+        cc.RemoveSelf:create()
+    ))
+    public_module.delay_do(1.2,function()
+        self:sort_body()
+    end)
 end
 
 --打印输出
@@ -223,6 +255,11 @@ function layer_auto_fight:do_print_fight(first_data, second_data, in_type, value
     _rich_text:setAnchorPoint(cc.p(0, 0))
     self.list_view:pushBackCustomItem(_rich_text)
     self.list_view:jumpToBottom()
+end
+
+function layer_auto_fight:sort_body()
+    public_module.ui_node_sort(self.node_player:getChildren(),"y-top",nil,nil,100)
+    public_module.ui_node_sort(self.node_enemy:getChildren(),"y-top",nil,nil,100)
 end
 
 return layer_auto_fight
