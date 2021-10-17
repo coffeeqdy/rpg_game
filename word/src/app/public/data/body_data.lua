@@ -45,6 +45,12 @@ function body_data:init_real_base_data()
     self:set_meta_data("base_hit_area", 10)--伤害浮动
 end
 
+function body_data:set_enemy_data(data)
+    for i, v in pairs(data) do
+        self:set_meta_data(i, v)
+    end
+end
+
 --equip_tag：装备标记
 --equip_id：装备id，取消装备传nil即可
 function body_data:set_equip(equip_type, equip_id)

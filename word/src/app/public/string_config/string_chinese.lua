@@ -4,4 +4,5 @@ return {
     miss = "闪开了",
     hurt = "受到伤害",
     crit = "并造成了暴击",
+    request_error = "请求错误",
 }

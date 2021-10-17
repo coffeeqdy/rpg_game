@@ -1,27 +1,25 @@
 
 local public_module = {}
 
-function public_module.toast(msg,time,ptY,is_ignore)
+function public_module.toast(msg, time)
     time = time or 2.0
     msg = msg or ""
-    local sprite = cc.Scale9Sprite:create("PublicRes/toastback.png")
+    local sprite = ccui.Scale9Sprite:create("PublicRes/toastback.png")
     local parent = cc.Director:getInstance():getRunningScene()
-    parent:addChild(sprite,100);
-    sprite:setPosition(display.cx, ptY or (display.cy - 200))
+    parent:addChild(sprite,100)
+    sprite:setPosition(display.cx, display.cy)
     sprite:setOpacity(0)
-    sprite:runAction(transition.sequence({
+    sprite:runAction(cc.Sequence:create(
         cc.FadeIn:create(0.5),
         cc.DelayTime:create(time),
         cc.FadeOut:create(0.5),
         cc.RemoveSelf:create()
-    }))
-    local pLabel = cc.Label:createWithTTF(msg, "fonts/FZZY.TTF", 30)
-    pLabel:setColor(cc.WHITE)
-    pLabel:setIgnoreAnchorPointForPosition(false)
-    pLabel:setAnchorPoint(cc.p(0.5,0.5))
-    sprite:addChild(pLabel)
-    sprite:setContentSize(cc.size(pLabel:getContentSize().width + 60, 74))
-    pLabel:setPosition(cc.p(sprite:getContentSize().width/2,sprite:getContentSize().height/2))
+    ))
+    local _text = ccui.Text:create(msg, "fonts/FZZY.TTF", 30)
+    _text:setTextColor(cc.WHITE)
+    sprite:addChild(_text)
+    sprite:setContentSize(cc.size(_text:getContentSize().width + 60, 74))
+    _text:setPosition(cc.p(sprite:getContentSize().width/2,sprite:getContentSize().height/2))
 end
 
 function public_module.show_error_dlg(str)

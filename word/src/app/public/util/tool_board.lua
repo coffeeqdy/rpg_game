@@ -1,6 +1,5 @@
 
 local public_module = require("app.public.util.public_module")
-local string_config = require("app.public.string_config.string")
 
 local tool_board = class("tool_board",cc.Node)
 
@@ -46,7 +45,6 @@ function tool_board:init_right_btns()
 end
 
 local MAX_LEN = 680
-local public_toast_text = require("app.public.tips.public_toast_text")
 function tool_board:ctor()
     local _node_view = cc.Node:create()
     self:addChild(_node_view)
@@ -229,8 +227,8 @@ function tool_board:on_parse_console_command(str)
         self:on_print_string("移除所有功能成功")
     elseif string.sub(str,1,7) == "-event " then
         local _tab = string.split(str, " ")
-        local ui_observer = require("app.public.util.ui_observer")
-        ui_observer.get_instance():send_event(_tab[2], _tab[3])
+        local event_manager = require("app.public.util.event_manager")
+        event_manager.get_instance():send_event(_tab[2], _tab[3])
         self:on_print_string("发送事件" .. _tab[2] .. "-" .._tab[3])
     elseif string.sub(str, 1, 5) == "-help" then
         self:on_print_string("----------------help----------------\n",nil,true)
@@ -306,6 +304,7 @@ function tool_board:on_print_string(_str, color, is_ignore)
     _text:setTextAreaSize(cc.size(MAX_LEN, 0))
     _text:addClickEventListener(function()
         public_module.copy_string(_str)
+        local string_config = require("app.public.string_config.string")
         public_module.toast(string_config.copy_success)
     end)
     _text:setTouchEnabled(true)

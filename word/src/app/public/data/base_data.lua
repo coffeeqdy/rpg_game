@@ -7,7 +7,7 @@ function base_data:init_base_data()
     self.base_def = 0
     self.base_hp = 0
     self.base_crit = 0--暴击率0~100
-    self.base_crit_hit = 2--暴击伤害为普通2倍
+    self.base_dmg = 2--暴击伤害为普通2倍
     self.base_hit_area = 10--造成伤害浮动百分比
     self.base_evd = 0--闪避率
     self.base_hit = 0--命中率
@@ -26,6 +26,7 @@ function base_data:get_meta_data(key_name)
         return self[key_name]
     else
         print("参数名不存在",key_name)
+        print(debug.traceback())
     end
 end
 
@@ -34,6 +35,7 @@ function base_data:set_meta_data(key_name, value)
         self[key_name] = value
     else
         print("参数名不存在",key_name)
+        print(debug.traceback())
     end
 end
 

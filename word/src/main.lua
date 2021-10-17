@@ -50,6 +50,7 @@ local function main()
     math.randomseed(os.time())
 
     require("app.public.global.global_data").load()--全局变量加载
+    require("app.server.server_center")--服务中心加载
     
     if CC_SHOW_FPS then
         cc.Director:getInstance():setDisplayStats(true)

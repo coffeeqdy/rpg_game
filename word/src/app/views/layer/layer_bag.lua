@@ -1,5 +1,5 @@
-local base_observer = require("app.public.base_observer")
-local layer_bag = class("layer_bag", base_observer)
+local base_layer = require("app.public.base.base_layer")
+local layer_bag = class("layer_bag", base_layer)
 
 function layer_bag:init()
     self.table_view = cc.TableView:create(self.size_rank_list)

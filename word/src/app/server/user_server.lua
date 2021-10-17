@@ -1,2 +1,9 @@
 --用户中心服务
---用户信息模块
+
+local user_server = {}
+
+function user_server:deal_user_msg(sub_id, data)
+    return false
+end
+
+return user_server

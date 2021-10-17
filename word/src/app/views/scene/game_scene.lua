@@ -1,7 +1,7 @@
 
 local game_scene = class("game_scene", cc.Layer)
 local public_module = require("app.public.util.public_module")
-local ui_observer = require("app.public.util.ui_observer")
+local event_manager = require("app.public.util.event_manager")
 
 local layer_main = require("app.views.layer.layer_main")
 

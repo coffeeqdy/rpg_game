@@ -1,7 +1,10 @@
-local base_observer = require("app.public.base_observer")
-local layer_main = class("layer_main", base_observer)
+local base_layer = require("app.public.base.base_layer")
+local layer_main = class("layer_main", base_layer)
 
 local layer_auto_fight = require("app.views.layer.layer_auto_fight")
+local string_config = require("app.public.string_config.string")
+local cmd_define = require("app.public.global.cmd_define")
+local public_module = require("app.public.util.public_module")
 
 function layer_main:init()
     self.node_root = cc.CSLoader:createNode("scene/layer_main.csb")
@@ -15,9 +18,17 @@ function layer_main:init()
 end
 
 function layer_main:get_listen_list()
+    return {
+        {cmd_define.main_system, cmd_define.sub_req_error}
+    }
 end
 
-function layer_main:on_deal_event(id, data)
+function layer_main:on_deal_event(main_id, sub_id, data)
+    if main_id == cmd_define.main_system then
+        if sub_id == cmd_define.sub_req_error then
+            public_module.toast(string_config.request_error .. "[" .. data.main_id .. "-" .. data.sub_id .. "]")
+        end
+    end
 end
 
 function layer_main:init_top(node_top)
